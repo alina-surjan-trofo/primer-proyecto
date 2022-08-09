@@ -3,18 +3,17 @@ const LIST_URL = "https://japdevdep.github.io/ecommerce-api/category/all.json";
 
 
 
-//array donde se cargarán los datos recibidos:
 let categoriesArray = [];
 
-//función que recibe un array con los datos, y los muestra en pantalla a través el uso del DOM
+
 function showCategoriesList(array){
     let htmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){ 
         let category = array[i];
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
-            <div class="row">
+        <main class="pb-5 container">
+            <div class="container">
                 <div class="col-3">
                     <img src="` + category.image + `" alt="product image" class="img-thumbnail">
                 </div>
@@ -31,19 +30,14 @@ function showCategoriesList(array){
 
                 </div>
             </div>
-        </div>
+        </main>
         `
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend; 
     }
 }
 
 
-/* 
-EJECUCIÓN:
-
--Al cargar la página se llama a getJSONData() pasándole por parámetro la dirección para obtener el listado.
--Se verifica el estado del objeto que devuelve, y, si es correcto, se cargan los datos en categoriesArray.
--Por último, se llama a showCategoriesList() pasándole por parámetro categoriesArray.
+//-JSONData()  showCategoriesList() pasándole por parámetro categoriesArray.
 
 */
 

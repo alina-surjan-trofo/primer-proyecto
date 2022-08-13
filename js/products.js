@@ -11,7 +11,7 @@ function showCategoriesList(array){
         <div class="list-group-item list-group-item-action cursor-active">
             <div class="row">
                 <div class="col-3">
-                    <img src="` + category.image + `" alt="product image" class="imgcatautos">
+                    <img src="` + category.image + `" alt="product image" class="img-thumbnail">
                     </div>
                     <div class ="col>
                         <div class="d-flex w-100 justify-content-between">
@@ -26,7 +26,7 @@ function showCategoriesList(array){
                 </div>    
             </div>    
             `
-            document.getElementById("cat-list-container").innerHTML = htmlContentToAppend; 
+            document.getElementById("cat-product-container").innerHTML = htmlContentToAppend; 
     }
     }
 

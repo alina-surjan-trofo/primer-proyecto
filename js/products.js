@@ -16,7 +16,7 @@ function showCategoriesList(array){
                     <div class ="col>
                         <div class="d-flex w-100 justify-content-between">
                             <div class="mb-1">
-                            <h4> `+ category.name +`</h>
+                            <h4> `+ category.name +`<br> `+ category.currency + category.cost +` </h4>
                             <p> `+ ctegory.description +`</p>
                             </div>
                             <small class="text-muted">` + category.soldCount + `articulos vendidos </small>

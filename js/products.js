@@ -24,22 +24,24 @@ function showCategoriesList(listado){
 
                     </div>
                 </div>    
-            </div>    
+            </div>  
+            </div>  
             `
-            document.getElementById("cat-product-container").innerHTML = lista; 
+            
     }
-    }
+    document.getElementById("cat-product-container").innerHTML = lista; 
+}
 
 
 //-JSONData()  showCategoriesList() pasándole por parámetro categoriesArray.
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    getJSONData(AUTOS_URL).then(function(resultObj){
-        if (resultObj.status === "ok"){ 
+document.addEventListener('DOMContentLoaded',()=>{
+    getJSONData(PRODUCTS_URL).then(function(resultObj){ 
+        if (resultObj.status === "ok"){
+
             categoriesListado = resultObj.data;
             showCategoriesList(categoriesListado);
-        }
-        else  alertify.alert('Alert Message!');
-         
+
         }
     })
+})

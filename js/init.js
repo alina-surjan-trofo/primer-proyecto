@@ -22,7 +22,7 @@ let getJSONData = function(url){
     return fetch(url)
     .then(response => {
       if (response.ok) {
-        return location.href = "index.html";;
+        return location.href = "login.html";;
       }else{
         throw Error(response.statusText);
       }
